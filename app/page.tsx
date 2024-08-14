@@ -1,113 +1,255 @@
 import Image from "next/image";
+import logo from "@/public/logo.svg";
+import logoInverted from "@/public/logo-inverted.svg";
+import SkillIcon from "./components/SkillIcon/SkillIcon";
+import ProjectCard from "./components/ProjectCard/ProjectCard";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    const count = [
+        "/icons/adobexd.svg",
+        "/icons/bootstrap.svg",
+        "/icons/composer.svg",
+        "/icons/css3.svg",
+        "/icons/express.svg",
+        "/icons/figma.svg",
+        "/icons/git.svg",
+        "/icons/github.svg",
+        "/icons/html5.svg",
+        "/icons/javascript.svg",
+        "/icons/laravel.svg",
+        "/icons/mongodb.svg",
+        "/icons/mysql.svg",
+        "/icons/nodedotjs.svg",
+        "/icons/npm.svg",
+        "/icons/php.svg",
+        "/icons/postman.svg",
+        "/icons/react.svg",
+        "/icons/sqlite.svg",
+        "/icons/symfony.svg",
+        "/icons/trello.svg",
+        "/icons/vscode-fill.svg",
+        "/icons/wordpress.svg",
+    ];
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    return (
+        <>
+            <section
+                id="home"
+                className="flex flex-col justify-center p-2 min-h-svh bg-slate-200"
+            >
+                <div className="logo flex align-middle justify-center my-2">
+                    <Image
+                        src={logo}
+                        alt="Logo du site Steeve MOMBRUN développeur Web Lyon"
+                        height={192}
+                        width={192}
+                    ></Image>
+                </div>
+                <div className="section-title text-center">
+                    <h1 className="text-3xl font-bold py-2">Steeve MOMBRUN</h1>
+                    <h2 className="text-xl font-light py-2">Développeur Web</h2>
+                </div>
+                <div className="arrow text-center">v</div>
+            </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <section
+                id="about"
+                className="flex flex-col justify-center py-10 px-4 min-h-[50svh] bg-slate-50"
+            >
+                <div className="section-content py-2 max-w-md  self-center text-justify">
+                    <div className="section-title text-center pb-5">
+                        <h2 className="text-2xl font-bold">À propos</h2>
+                        <span className="subtitle font-light">de moi</span>
+                    </div>
+                    <p className="py-2">
+                        Je m&apos;appelle Steeve MOMBRUN et je suis développeur
+                        web, principalement spécialisé en back-end mais avec des
+                        compétences en front-end. J&apos;ai également des
+                        compétences en SEO, me permettant d&apos;optimiser les
+                        sites web pour améliorer leur visibilité en ligne.
+                    </p>
+                    <p className="py-2">
+                        Au cours de mon parcours professionnel, j&apos;ai
+                        travaillé en tant qu&apos;intégrateur web, j&apos;ai
+                        participé à des projets de maintenance applicative (TMA)
+                        et j&apos;ai développé une expertise dans le débogage
+                        d&apos;applications web.
+                    </p>
+                </div>
+            </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+            <section
+                id="projects"
+                className="flex flex-col items-center py-10 px-4 min-h-svh bg-slate-200"
+            >
+                <div className="section-content">
+                    <div className="section-title text-center pb-5">
+                        <span className="subtitle font-light">Mes</span>
+                        <h2 className="text-2xl font-bold">Réalisations</h2>
+                    </div>
+                    <div className="project-cards flex flex-wrap justify-center max-w-screen-xl gap-3">
+                        {count.map((e, i) => {
+                            return (
+                                <ProjectCard
+                                    key={i}
+                                    src={`https://picsum.photos/id/${
+                                        i * i
+                                    }/400/350`}
+                                    alt="Project name"
+                                />
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+            <section
+                id="skills"
+                className="flex flex-col items-center justify-center py-10 px-4 min-h-[100svh] bg-slate-50 relative"
+            >
+                <div className="floating-items">
+                    {count.map((e, i) => {
+                        return <SkillIcon key={i} src={e} />;
+                    })}
+                </div>
+                <div className="bg-slate-500/10 backdrop-blur-sm max-w-screen-sm p-8">
+                    <div className="section-title text-center">
+                        <span className="subtitle font-light">Mes</span>
+                        <h2 className="text-2xl font-bold">Compétences</h2>
+                    </div>
+                    <p className="my-4">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Hic numquam maiores rem ut architecto labore,
+                        magnam quibusdam et esse velit quasi distinctio earum
+                        veniam inventore illum nobis officiis dolores laudantium
+                        eveniet ratione vero magni ducimus amet? Inventore,
+                        molestias impedit aperiam quis, cum soluta neque rem
+                        cumque culpa beatae nisi expedita vel perferendis illum
+                        alias, fugiat eligendi corrupti. Eaque repudiandae
+                        commodi qui aut fugiat voluptatum consequuntur magni
+                        praesentium saepe esse quis quasi vitae sequi cupiditate
+                        temporibus similique a, asperiores ex voluptates! Esse
+                        velit, dolores quas, deserunt quam vel similique dicta
+                        quos facilis maxime sapiente in nulla inventore nisi at
+                        doloremque! Animi.
+                    </p>
+                    <p className="my-4">
+                        Quo voluptas officia similique laboriosam consequuntur
+                        vero, assumenda dolor velit. Iste totam beatae ipsa at,
+                        ab facere ut consectetur nam laboriosam accusamus
+                        doloribus. Quod suscipit aperiam, unde perspiciatis qui
+                        nemo sunt repellendus blanditiis amet quidem, labore in
+                        laboriosam soluta excepturi magnam corrupti sit iste.
+                        Rem recusandae consectetur qui perspiciatis ipsa fugit
+                        suscipit itaque autem, obcaecati, veritatis corrupti nam
+                        ut sit. Reprehenderit nemo, rerum sed iure dolorum
+                        voluptates labore commodi facere inventore molestiae
+                        nulla beatae laudantium asperiores velit necessitatibus
+                        facilis ipsam ducimus et possimus vitae consequuntur
+                        maiores ut temporibus explicabo? Doloribus ab illo,
+                        consectetur cum quaerat repellendus asperiores fugiat
+                        qui facere!
+                    </p>
+                </div>
+            </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+            <section
+                id="contact"
+                className="flex flex-col py-10 px-4 bg-slate-200"
+            >
+                <div className="section-title text-center py-2">
+                    <span className="subtitle font-light">Me</span>
+                    <h2 className="text-2xl font-bold">Contacter</h2>
+                </div>
+                <div className="section-content max-w-md self-center">
+                    <p className="introduction py-2">
+                        Remplissez ce formulaire et je vous recontacterais très
+                        rapidement.
+                    </p>
+                    <div className="contact-form">
+                        <form action="#">
+                            <div className="form-field my-4">
+                                <label htmlFor="name">Nom</label>
+                                <input
+                                    className="w-full outline-none p-2"
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                />
+                            </div>
+                            <div className="form-field my-4">
+                                <label htmlFor="email">Email</label>
+                                <input
+                                    className="w-full outline-none p-2"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                />
+                            </div>
+                            <div className="form-field my-4">
+                                <label htmlFor="phone">Téléphone</label>
+                                <input
+                                    className="w-full outline-none p-2"
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                />
+                            </div>
+                            <div className="form-field my-4">
+                                <label htmlFor="message">Message</label>
+                                <textarea
+                                    className="w-full min-h-52 outline-none p-2"
+                                    name="message"
+                                    id="message"
+                                ></textarea>
+                            </div>
+                            <div className="optin my-4 flex items-baseline">
+                                <input
+                                    type="checkbox"
+                                    name="option"
+                                    id="optin"
+                                />
+                                &nbsp;
+                                <label htmlFor="optin" className="optin-rules">
+                                    Je comprends et j’accepte que mes données
+                                    soient enregistrées pour que je puisse être
+                                    rappelé.
+                                </label>
+                            </div>
+                            <div className="send-form-btn flex justify-center my-2">
+                                <input
+                                    type="submit"
+                                    value="Envoyer"
+                                    className="border border-solid bg-white py-2 px-5 hover:bg-slate-600 hover:text-white"
+                                />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="footer" className="py-10 bg-slate-600 text-white">
+                <div className="flex flex-col gap-3 items-center ">
+                    <Image
+                        src={logoInverted}
+                        alt="Logo site du Portfolio de Steeve MOMBRUN développeur Web"
+                        width={48}
+                        height={48}
+                    ></Image>
+                    <div className="section-title text-center">
+                        <h2 className="text-xl py-3">Steeve MOMBRUN</h2>
+                        <p className="subtitle text-sm font-light">
+                            steeve.mombrun@outlook.com
+                        </p>
+                        <p className="subtitle text-sm font-light">
+                            06.65.75.10.77
+                        </p>
+                    </div>
+                    <div className="copyrights">
+                        Steeve MOMBRUN &copy; 2024, all rights reserved
+                    </div>
+                </div>
+            </footer>
+        </>
+    );
 }
