@@ -5,16 +5,15 @@ $item-count: 23;
 
 .floating-items {
     position: absolute;
-    top: 0;
-    left: 0;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
 .item {
-    position: absolute;
     height: $item-size;
     width: $item-size;
 
@@ -32,7 +31,6 @@ $item-count: 23;
 
 @for $i from 0 through $item-count - 1 {
     .floating-items .item:nth-child(#{$i+1}) {
-        left: calc( ((100vw - $item-size) / $item-count ) * $i + $item-size / 2);
         animation-delay: -#{math.random(10)}s;
         animation-duration: #{2 + math.random(8)}s;
     }
@@ -40,9 +38,9 @@ $item-count: 23;
 
 @keyframes floating {
     from {
-        top: 100%;
+        translate: 0 100vh;
     }
     to {
-        top: -#{$item-size};
+        translate: 0 -100vh;
     }
 }
