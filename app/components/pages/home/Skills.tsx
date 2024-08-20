@@ -1,5 +1,5 @@
 import React from "react";
-import SkillIcon from "../../SkillIcon/SkillIcon";
+import SkillIcon from "../../skillIcon/SkillIcon";
 
 function Skills() {
 
@@ -14,7 +14,6 @@ function Skills() {
         "/icons/github.svg",
         "/icons/html5.svg",
         "/icons/javascript.svg",
-        "/icons/laravel.svg",
         "/icons/mongodb.svg",
         "/icons/mysql.svg",
         "/icons/nodedotjs.svg",
@@ -23,7 +22,6 @@ function Skills() {
         "/icons/postman.svg",
         "/icons/react.svg",
         "/icons/sqlite.svg",
-        "/icons/symfony.svg",
         "/icons/trello.svg",
         "/icons/vscode-fill.svg",
         "/icons/wordpress.svg",

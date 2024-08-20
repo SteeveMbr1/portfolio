@@ -1,6 +1,7 @@
 import Image from "next/image";
 import logo from "@/public/logo.svg";
 import arrow from "@/public/down-arrow.svg"
+import Link from "next/link";
 
 function Home() {
     return (
@@ -20,12 +21,15 @@ function Home() {
                 <h1 className="text-3xl font-bold py-2">Steeve MOMBRUN</h1>
                 <h2 className="text-xl font-light py-2">Développeur Web</h2>
             </div>
-            <div className="arrow m-auto">
-                <Image
-                    src={arrow}
-                    alt="see more below button"
-                    width={48}
-                ></Image>
+            <div className="m-auto">
+                <Link href={`#about`}>
+                    <Image
+                        className="arrow"
+                        src={arrow}
+                        alt="see more below button"
+                        width={48}
+                    ></Image>
+                </Link>
             </div>
         </section>
     );

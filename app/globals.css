@@ -5,3 +5,21 @@
 :root {
 
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.arrow {
+    animation-name: arrowDown;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes arrowDown {
+    to {
+        translate: 0 2rem;
+    }
+}
