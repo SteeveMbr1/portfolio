@@ -2,11 +2,11 @@ import { sendMail } from "@/lib/sendMail";
 
 export async function POST(request: Request) {
     const formData = await request.formData();
-    const email = formData.get('email')
-    const name = formData.get('name')
-    const to = `${name} <${email}>`
+    const email = formData.get('email')?.toString()
 
-    console.log(formData);
+    if ( !email )
+        return Response.error().json()
+
     const mail = {
         to: email,
         subject: "Demande de contact",
