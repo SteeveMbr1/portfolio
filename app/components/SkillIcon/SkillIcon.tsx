@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from 'react'
 import './SkillIcon.scss'
 
-function SkillIcon({key, src} : {key:number, src:string}) {
+function SkillIcon({id, src} : {id:number, src:string}) {
   return (
-    <div key={key} className="item bg-slate-400"><Image src={src} alt="logo" width={100} height={100}></Image></div>
+    <div key={id} className="item bg-slate-400"><Image src={src} alt="logo" width={100} height={100}></Image></div>
   )
 }
 

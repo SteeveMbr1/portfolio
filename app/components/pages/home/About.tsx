@@ -4,7 +4,7 @@ function About() {
     return (
         <section
             id="about"
-            className="flex flex-col py-10 min-h-[50svh] bg-slate-50"
+            className="flex flex-col py-10 px-6 min-h-[50svh] bg-slate-50"
         >
             <div className="section-content max-w-md  m-auto text-justify">
                 <div className="section-title text-center pb-5">

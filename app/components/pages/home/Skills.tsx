@@ -34,15 +34,15 @@ function Skills() {
         >
             <div className="floating-items">
                 {icons.map((icon, key) => {
-                    return <SkillIcon key={key} src={icon} />;
+                    return <SkillIcon key={key} id={key} src={icon} />;
                 })}
             </div>
-            <div className="bg-slate-500/10 backdrop-blur-sm max-w-screen-sm m-auto p-8">
+            <div className="bg-slate-500/5 backdrop-blur-sm max-w-screen-sm m-auto p-8">
                 <div className="section-title text-center">
                     <span className="subtitle font-light">Mes</span>
                     <h2 className="text-2xl font-bold">Compétences</h2>
                 </div>
-                <p className="my-4">
+                <p className="my-6">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Hic numquam maiores rem ut architecto labore, magnam
                     quibusdam et esse velit quasi distinctio earum veniam

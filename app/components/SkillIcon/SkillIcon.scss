@@ -1,6 +1,6 @@
 @use 'sass:math';
 
-$item-size: 100px;
+$item-size: 72px;
 $item-count: 21;
 
 .floating-items {
@@ -8,6 +8,7 @@ $item-count: 21;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: flex-end;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -21,7 +22,7 @@ $item-count: 21;
     justify-content: center;
     align-items: center;
 
-    animation: floating ease-in infinite;
+    animation: floating cubic-bezier(1, 0.47, 0.11, 0.51) infinite;
 
     img {
         width: calc($item-size / 2);
@@ -31,14 +32,14 @@ $item-count: 21;
 
 @for $i from 0 through $item-count - 1 {
     .floating-items .item:nth-child(#{$i+1}) {
-        animation-delay: -#{math.random(10)}s;
-        animation-duration: #{2 + math.random(8)}s;
+        animation-delay: -#{math.random(5)}s;
+        animation-duration: #{6 + math.random(8)}s;
     }
 }
 
 @keyframes floating {
     from {
-        translate: 0 100vh;
+        translate: 0 20vh;
     }
     to {
         translate: 0 -100vh;
