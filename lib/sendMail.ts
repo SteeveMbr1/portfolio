@@ -1,5 +1,6 @@
 'use server';
 import nodemailer from 'nodemailer';
+import SMTPTransport from 'nodemailer/lib/smtp-transport/index.js';
 
 const SMTP_SERVER_HOST = process.env.SMTP_SERVER_HOST;
 const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
@@ -14,7 +15,7 @@ const transporter = nodemailer.createTransport({
         user: SMTP_SERVER_USERNAME,
         pass: SMTP_SERVER_PASSWORD,
     }
-});
+} as SMTPTransport.Options );
 
 
 export async function sendMail({
