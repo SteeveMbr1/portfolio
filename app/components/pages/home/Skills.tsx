@@ -1,8 +1,8 @@
 import React from "react";
 import SkillIcon from "../../skillIcon/SkillIcon";
+import FlipCard from "../../flipCard/FlipCard";
 
 function Skills() {
-
     const icons = [
         "/icons/adobexd.svg",
         "/icons/bootstrap.svg",
@@ -27,6 +27,45 @@ function Skills() {
         "/icons/wordpress.svg",
     ];
 
+    const skillCards = [
+        {
+            name: "Langages de programmation et technologies web",
+            items: ["Html5", "Css3", "Javascript", "Php"],
+        },
+        {
+            name: "Frameworks et bibliothèques",
+            items: ["Bootstrap", "React", "Express"],
+        },
+        {
+            name: "Gestionnaires de paquets",
+            items: ["Npm", "Composer"],
+        },
+        {
+            name: "Outils de développement et environnements",
+            items: [
+                "Vscode",
+                "Git",
+                "Github",
+                "Postman",
+                "Trello",
+                "Figma",
+                "Adobe Xd",
+            ],
+        },
+        {
+            name: "Systèmes de gestion de bases de données (SGBD)",
+            items: ["mysql", "sqlite", "mongodb"],
+        },
+        {
+            name: "Environnements d'exécution",
+            items: ["nodedotjs"],
+        },
+        {
+            name: "Systèmes de gestion de contenu (CMS)",
+            items: ["wordpress"],
+        },
+    ];
+
     return (
         <section
             id="skills"
@@ -42,21 +81,29 @@ function Skills() {
                     <span className="subtitle font-light">Mes</span>
                     <h2 className="text-2xl font-bold">Compétences</h2>
                 </div>
-                <p className="my-6">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Hic numquam maiores rem ut architecto labore, magnam
-                    quibusdam et esse velit quasi distinctio earum veniam
-                    inventore illum nobis officiis dolores laudantium eveniet
-                    ratione vero magni ducimus amet? Inventore, molestias
-                    impedit aperiam quis, cum soluta neque rem cumque culpa
-                    beatae nisi expedita vel perferendis illum alias, fugiat
-                    eligendi corrupti. Eaque repudiandae commodi qui aut fugiat
-                    voluptatum consequuntur magni praesentium saepe esse quis
-                    quasi vitae sequi cupiditate temporibus similique a,
-                    asperiores ex voluptates! Esse velit, dolores quas, deserunt
-                    quam vel similique dicta quos facilis maxime sapiente in
-                    nulla inventore nisi at doloremque! Animi.
+                <div className="py-4">
+                <p>
+                    Au cours de ma formation, j&apos;ai acquis diverses
+                    compétences grâce aux projets sur lesquels j&apos;ai
+                    travaillé.
                 </p>
+                <p>
+                    Toutefois, les technologies évoluant très
+                    rapidement, il est essentiel de rester constamment à jour.
+                    Pour cela, je réalise une veille régulière sur les réseaux
+                    sociaux, ce qui me permet également d&apos;acquérir de
+                    nouvelles compétences.
+                </p>
+                <p>
+                    À ce jour, ces différentes approches
+                    m&apos;ont permis de maîtriser les technologies suivantes :
+                </p>
+                </div>
+                <div className="skill-cards flex flex-wrap gap-4 justify-evenly">
+                    {skillCards.map((skill, i) => {
+                        return <FlipCard key={i} name={skill.name} items={skill.items}></FlipCard>
+                    })}
+                </div>
             </div>
         </section>
     );

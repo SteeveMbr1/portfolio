@@ -12,27 +12,10 @@ function About() {
                     <span className="subtitle font-light">de moi</span>
                 </div>
                 <p className="py-2">
-                    Je m&apos;appelle Steeve MOMBRUN et je suis développeur web,
-                    principalement spécialisé en back-end mais avec des
-                    compétences en front-end. J&apos;ai également des
-                    compétences en SEO, me permettant d&apos;optimiser les sites
-                    web pour améliorer leur visibilité en ligne.
+                    Je m&apos;appelle Steeve MOMBRUN, développeur web spécialisé principalement en back-end, avec des compétences également en front-end. En parallèle, je possède une expertise en SEO, me permettant d&apos;optimiser les sites web pour améliorer leur visibilité en ligne.
                 </p>
                 <p className="py-2">
-                    Au cours de mon parcours professionnel, j&apos;ai travaillé
-                    en tant qu&apos;intégrateur web, j&apos;ai participé à des
-                    projets de maintenance applicative (TMA) et j&apos;ai
-                    développé une expertise dans le débogage d&apos;applications
-                    web.
-                </p>
-                <p className="py-2">
-                    Développeur web spécialisé dans le back-end, je vois chaque projet
-                    comme une chance d&apos;apprendre et de me perfectionner.
-                    Chaque défi est pour moi une occasion d&apos;affiner mes compétences
-                    et de créer des solutions solides et évolutives. Animé par la passion
-                    du code, j&apos;aborde chaque mission avec l&apos;envie de
-                    m&apos;améliorer continuellement et de contribuer de manière
-                    significative à la réussite des projets auxquels je participe.
+                    Pour moi, chaque projet représente une opportunité d&apos;apprendre et de me perfectionner, d&apos;affiner mes compétences et de créer des solutions robustes et évolutives. Passionné par le code, j&apos;aborde chaque mission avec l&apos;ambition de progresser continuellement et de contribuer de manière significative à la réussite des projets auxquels je participe.
                 </p>
             </div>
         </section>

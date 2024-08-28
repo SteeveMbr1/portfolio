@@ -61,13 +61,13 @@ export async function POST(request: Request) {
         await sendMail(mail);
         await sendMail({...mail, to: process.env.SITE_MAIL_SENDER});
         return Response.json({
-            message : "Votre mail à bien été envoyé",
+            message : "Votre mail a bien été envoyé",
             success : true,
             mail: mail
         });
     } catch (error) {
         return Response.json({
-            message : "Une erreur est survenu lors de l'envoie de votre mail",
+            message : "Une erreur est survenue lors de l'envoi de votre mail",
             success : false,
         });
     }

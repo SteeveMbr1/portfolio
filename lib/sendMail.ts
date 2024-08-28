@@ -29,7 +29,7 @@ export async function sendMail({
     html?: string;
 }) {
     try {
-        const isVerified = await transporter.verify();
+        await transporter.verify();
         const info = await transporter.sendMail({
             from: SITE_MAIL_SENDER,
             to: to,
@@ -37,9 +37,7 @@ export async function sendMail({
             text: text,
             html: html,
         });
-        console.log('Message Sent', info.messageId);
-        console.log('Mail sent to', to);
-        return info;
+        return info.accepted;
     } catch (error) {
         if (error instanceof Error) {
             return error.message;

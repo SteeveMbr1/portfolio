@@ -22,5 +22,17 @@
         "git": "https://github.com/SteeveMbr1/oc-projects-Mon-Vieux-Grimoire",
         "images": ["/images/projects/mon-vieux-grimoire/book.png"],
         "tags": ["NodeJs", "Express", "Mongoose", "MVC", "API Rest"]
+    },
+    {
+        "id": 3,
+        "name": "ANB61",
+        "description": {
+            "short": "Site d'un professionnel réalisant de la protection cathodique",
+            "long": "Projet en cours...\nRefonte d'un site vitrine initialement conçu avec Wix, avec l'ajout d'un panier et la possibilité de créer des devis personnalisés."
+        },
+        "link": "",
+        "git": "",
+        "images": ["/images/projects/anb61/home.PNG"],
+        "tags": ["NextJs", "MongoDB", "Mongoose", "NodeMailer", "Vercel"]
     }
 ]

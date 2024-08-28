@@ -23,7 +23,7 @@ function ContactForm() {
 
     async function sendForm(formData :FormData) {
         if ( ! formValidation(formData) )
-            return window.alert("Merci de remplire tous les champs du formulaire");
+            return window.alert("Merci de remplir tous les champs du formulaire");
         try {
             const res = await fetch('/api/mail',{
                 method: 'POST',

@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import './ProjectCard.scss';
 import { ProjectType } from "@/app/types/ProjectType.js";
+import git from "@/public/icons/github.svg";
 
 
 
@@ -44,9 +45,14 @@ function ProjectCard({ project } : { project: ProjectType }) {
                         </div>
                     </div>
                 </div>
-                <a className="see-more-btn block rounded-full border border-slate-500 size-10 min-w-10 text-center content-center self-end" href={project.link}>
-                    {"->"}
-                </a>
+                <div className="links flex flex-col gap-2">
+                    {project.link && (
+                        <a className="flex rounded-full border border-slate-500 size-10 min-w-10 justify-center items-center text-xs" href={project.link}><span>www</span></a>
+                    )}
+                    {project.git && (
+                        <a className="flex rounded-full size-10 min-w-10 justify-center items-center" href={project.link}><Image src={git} width={40} alt="Link to project github"></Image></a>
+                    )}
+                </div>
             </figcaption>
         </figure>
     );
