@@ -14,7 +14,11 @@ const transporter = nodemailer.createTransport({
     auth: {
         user: SMTP_SERVER_USERNAME,
         pass: SMTP_SERVER_PASSWORD,
-    }
+    },
+    secureConnection: false,
+    tls: {
+        ciphers:'SSLv3'
+     },
 } as SMTPTransport.Options);
 
 
