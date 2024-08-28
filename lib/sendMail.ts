@@ -9,16 +9,11 @@ const SITE_MAIL_SENDER = process.env.SITE_MAIL_SENDER;
 const SMTP_PORT = process.env.SMTP_PORT;
 
 const transporter = nodemailer.createTransport({
-    host: SMTP_SERVER_HOST,
-    port: SMTP_PORT,
+    service: "gmail",
     auth: {
         user: SMTP_SERVER_USERNAME,
         pass: SMTP_SERVER_PASSWORD,
     },
-    secureConnection: false,
-    tls: {
-        ciphers:'SSLv3'
-     },
 } as SMTPTransport.Options);
 
 
