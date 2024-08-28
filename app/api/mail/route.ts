@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     const mail = {
         to: email,
         subject: "Demande de contact",
-        text: "Raw text",
+        text: "Raw Mail",
         html: ''
     }
     let body = '';
@@ -33,6 +33,6 @@ export async function POST(request: Request) {
             ${body}
         </tbody>
     </table>`
-    sendMail(mail)
-    return Response.json({mail})
+    const info = await sendMail(mail)
+    return Response.json({mail, info})
   }
