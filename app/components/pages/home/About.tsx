@@ -26,7 +26,13 @@ function About() {
                     web.
                 </p>
                 <p className="py-2">
-                Développeur web spécialisé dans le back-end, je vois chaque projet comme une chance d'apprendre et de me perfectionner. Chaque défi est pour moi une occasion d'affiner mes compétences et de créer des solutions solides et évolutives. Animé par la passion du code, j'aborde chaque mission avec l'envie de m'améliorer continuellement et de contribuer de manière significative à la réussite des projets auxquels je participe.
+                    Développeur web spécialisé dans le back-end, je vois chaque projet
+                    comme une chance d&apos;apprendre et de me perfectionner.
+                    Chaque défi est pour moi une occasion d&apos;affiner mes compétences
+                    et de créer des solutions solides et évolutives. Animé par la passion
+                    du code, j&apos;aborde chaque mission avec l&apos;envie de
+                    m&apos;améliorer continuellement et de contribuer de manière
+                    significative à la réussite des projets auxquels je participe.
                 </p>
             </div>
         </section>
