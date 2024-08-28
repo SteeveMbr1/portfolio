@@ -6,7 +6,7 @@ function ContactForm() {
 
     async function sendForm(formData :FormData) {
 
-        fetch('/mail',{
+        fetch('/api/mail',{
             method: 'POST',
             body: formData
         })

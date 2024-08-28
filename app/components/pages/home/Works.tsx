@@ -1,19 +1,18 @@
-import { randomUUID, UUID } from "node:crypto";
+"use client"
+
 import ProjectCard from "../../projectCard/ProjectCard";
 import { ProjectType } from "@/app/types/ProjectType.js";
+import { useEffect, useState } from "react";
 
 function Works() {
-    const projects = Array<ProjectType>(2).fill({
-        id: randomUUID(),
-        name: "Kasa",
-        description: {
-            short: "Courte description du projet Kasa",
-            long: "Long description du projet Kasa, pour expliquer comment il a été réalisé",
-        },
-        link: "https://oc-project-kasa-steeve-mbr1.vercel.app/",
-        images: ["/images/projects/kasa/home.png"],
-        tags: ["HTML", "CSS", "Js", "ReactJS"],
-    });
+    const [projects, setProjects] = useState<ProjectType[]>([])
+
+    useEffect(() => {
+        fetch("/projects.json")
+            .then(r => r.json())
+            .then(r => setProjects(r));
+    }, []);
+
 
     return (
         <section id="projects" className="flex flex-col items-center py-10 px-6 bg-slate-200" >

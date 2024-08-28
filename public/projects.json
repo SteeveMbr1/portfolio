@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Kasa",
+        "description": {
+            "short": "Application web de location immobilière",
+            "long": "Implémentation du front-end d'une application en utilisant React et React Router pour créer une expérience utilisateur moderne et réactive."
+        },
+        "link": "https://oc-project-kasa-steeve-mbr1.vercel.app/",
+        "git": "https://github.com/SteeveMbr1/oc-project-kasa",
+        "images": ["/images/projects/kasa/home.png"],
+        "tags": ["NodeJs", "ReactJS", "SASS", "JSON", "Api", "Figma"]
+    },
+    {
+        "id": 2,
+        "name": "Mon Vieux Grimoire",
+        "description": {
+            "short": "Site de notation de livres",
+            "long": "Création d'un serveur avec Express et connexion à une base de données MongoDB. Développement des modèles de données et implémentation des opérations CRUD pour la gestion des livres et des notations. Implémentation d'un système d'authentification sécurisé pour les utilisateurs du site."
+        },
+        "link": "",
+        "git": "https://github.com/SteeveMbr1/oc-projects-Mon-Vieux-Grimoire",
+        "images": ["/images/projects/mon-vieux-grimoire/book.png"],
+        "tags": ["NodeJs", "Express", "Mongoose", "MVC", "API Rest"]
+    }
+]

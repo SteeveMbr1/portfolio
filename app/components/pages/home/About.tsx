@@ -25,6 +25,9 @@ function About() {
                     développé une expertise dans le débogage d&apos;applications
                     web.
                 </p>
+                <p className="py-2">
+                Développeur web spécialisé dans le back-end, je vois chaque projet comme une chance d'apprendre et de me perfectionner. Chaque défi est pour moi une occasion d'affiner mes compétences et de créer des solutions solides et évolutives. Animé par la passion du code, j'aborde chaque mission avec l'envie de m'améliorer continuellement et de contribuer de manière significative à la réussite des projets auxquels je participe.
+                </p>
             </div>
         </section>
     );

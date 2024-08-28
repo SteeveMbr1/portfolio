@@ -15,6 +15,7 @@ function Home() {
                     alt="Logo du site Steeve MOMBRUN développeur Web Lyon"
                     height={192}
                     width={192}
+                    priority
                 ></Image>
             </div>
             <div className="section-title text-center">
