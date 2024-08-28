@@ -41,7 +41,9 @@ export async function sendMail({
         console.log('Mail sent to', to);
         return info;
     } catch (error) {
-        console.error('Something Went Wrong', SMTP_SERVER_USERNAME, SMTP_SERVER_PASSWORD, error);
+        if (error instanceof Error) {
+            return error.message;
+        }
         return error;
     }
 
