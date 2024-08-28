@@ -32,7 +32,11 @@ export async function POST(request: Request) {
         <tbody>
             ${body}
         </tbody>
-    </table>`
-    const info = await sendMail(mail)
-    return Response.json({mail, info})
+    </table>`;
+    try {
+        const info = await sendMail(mail);
+        return Response.json({"mail": mail, "info": info});
+    } catch (error) {
+        return Response.json({error});
+    }
   }
