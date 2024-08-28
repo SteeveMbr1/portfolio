@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
         user: SMTP_SERVER_USERNAME,
         pass: SMTP_SERVER_PASSWORD,
     }
-} as SMTPTransport.Options );
+} as SMTPTransport.Options);
 
 
 export async function sendMail({
@@ -31,18 +31,19 @@ export async function sendMail({
 }) {
     try {
         const isVerified = await transporter.verify();
+        const info = await transporter.sendMail({
+            from: SITE_MAIL_SENDER,
+            to: to,
+            subject: subject,
+            text: text,
+            html: html,
+        });
+        console.log('Message Sent', info.messageId);
+        console.log('Mail sent to', to);
+        return info;
     } catch (error) {
         console.error('Something Went Wrong', SMTP_SERVER_USERNAME, SMTP_SERVER_PASSWORD, error);
         return;
     }
-    const info = await transporter.sendMail({
-        from: SITE_MAIL_SENDER,
-        to: to,
-        subject: subject,
-        text: text,
-        html: html,
-    });
-    console.log('Message Sent', info.messageId);
-    console.log('Mail sent to', to);
-    return info;
+
 }

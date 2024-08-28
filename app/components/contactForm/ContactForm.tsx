@@ -6,10 +6,15 @@ function ContactForm() {
 
     async function sendForm(formData :FormData) {
 
-        fetch('/api/mail',{
-            method: 'POST',
-            body: formData
-        })
+        try {
+            const res = await fetch('/api/mail',{
+                method: 'POST',
+                body: formData
+            })
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     return (
