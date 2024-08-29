@@ -5,7 +5,6 @@ import FlipCard from "../../flipCard/FlipCard";
 function Skills() {
     const icons = [
         "/icons/adobexd.svg",
-        "/icons/bootstrap.svg",
         "/icons/composer.svg",
         "/icons/css3.svg",
         "/icons/express.svg",
@@ -25,44 +24,45 @@ function Skills() {
         "/icons/trello.svg",
         "/icons/vscode-fill.svg",
         "/icons/wordpress.svg",
+        "icons/tailwindcss.svg",
     ];
 
     const skillCards = [
         {
-            name: "Langages de programmation et technologies web",
-            items: ["Html5", "Css3", "Javascript", "Php"],
+            name: "Langages Web",
+            items: ["HTML5", "CSS3"],
+        },
+        {
+            name: "Langages de programmation",
+            items: ["JavaScript", "PHP"],
         },
         {
             name: "Frameworks et bibliothèques",
-            items: ["Bootstrap", "React", "Express"],
+            items: ["Express", "React", "TailwindCSS"],
         },
         {
-            name: "Gestionnaires de paquets",
-            items: ["Npm", "Composer"],
+            name: "Outils de versionning",
+            items: ["Git", "GitHub"],
         },
         {
-            name: "Outils de développement et environnements",
-            items: [
-                "Vscode",
-                "Git",
-                "Github",
-                "Postman",
-                "Trello",
-                "Figma",
-                "Adobe Xd",
-            ],
+            name: "Outils de développement",
+            items: ["Composer", "npm", "Postman", "VScode", "Trello"],
         },
         {
-            name: "Systèmes de gestion de bases de données (SGBD)",
-            items: ["mysql", "sqlite", "mongodb"],
+            name: "Base de données",
+            items: ["MongoDB", "MySQL", "SQLite"],
+        },
+        {
+            name: "Outils de conception",
+            items: ["AdobeXD", "Figma"],
+        },
+        {
+            name: "CMS",
+            items: ["WordPress"],
         },
         {
             name: "Environnements d'exécution",
-            items: ["nodedotjs"],
-        },
-        {
-            name: "Systèmes de gestion de contenu (CMS)",
-            items: ["wordpress"],
+            items: ["Node.js"],
         },
     ];
 
@@ -82,26 +82,32 @@ function Skills() {
                     <h2 className="text-2xl font-bold">Compétences</h2>
                 </div>
                 <div className="py-4">
-                <p>
-                    Au cours de ma formation, j&apos;ai acquis diverses
-                    compétences grâce aux projets sur lesquels j&apos;ai
-                    travaillé.
-                </p>
-                <p>
-                    Toutefois, les technologies évoluant très
-                    rapidement, il est essentiel de rester constamment à jour.
-                    Pour cela, je réalise une veille régulière sur les réseaux
-                    sociaux, ce qui me permet également d&apos;acquérir de
-                    nouvelles compétences.
-                </p>
-                <p>
-                    À ce jour, ces différentes approches
-                    m&apos;ont permis de maîtriser les technologies suivantes :
-                </p>
+                    <p className="py-2">
+                        Au cours de ma formation, j&apos;ai acquis diverses
+                        compétences grâce aux projets sur lesquels j&apos;ai
+                        travaillé.
+                    </p>
+                    <p className="py-2">
+                        Toutefois, les technologies évoluant très rapidement, il
+                        est essentiel de rester constamment à jour. Pour cela,
+                        je réalise une veille régulière sur les réseaux sociaux,
+                        ce qui me permet également d&apos;acquérir de nouvelles
+                        compétences.
+                    </p>
+                    <p className="py-2">
+                        À ce jour, ces différentes approches m&apos;ont permis
+                        de maîtriser les technologies et outils suivantes :
+                    </p>
                 </div>
-                <div className="skill-cards flex flex-wrap gap-4 justify-evenly">
+                <div className="skill-cards grid grid-cols-3 grid-flow-row gap-2">
                     {skillCards.map((skill, i) => {
-                        return <FlipCard key={i} name={skill.name} items={skill.items}></FlipCard>
+                        return (
+                            <FlipCard
+                                key={i}
+                                name={skill.name}
+                                items={skill.items}
+                            ></FlipCard>
+                        );
                     })}
                 </div>
             </div>

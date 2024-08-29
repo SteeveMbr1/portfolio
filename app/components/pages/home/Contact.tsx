@@ -10,8 +10,9 @@ function Contact() {
             </div>
             <div className="section-content max-w-md self-center">
                 <p className="introduction py-2">
-                    Remplissez ce formulaire et je vous recontacterais très
-                    rapidement.
+                    Des questions ou un projet en tête ? Remplissez notre
+                    formulaire de contact et recevez une réponse rapide pour
+                    passer à l&apos;action !
                 </p>
                 <div className="contact-form">
                     <ContactForm></ContactForm>

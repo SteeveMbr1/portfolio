@@ -22,7 +22,7 @@ function Works() {
                     <h2 className="text-2xl font-bold">Réalisations</h2>
                 </div>
                 <div className="my-6">
-                    <p className="text-center">Voici quelques-uns des projets sur lequel j&apos;ai pu travailler :</p>
+                    <p className="text-center">Voici quelques projets sur lesquels j&apos;ai travaillé ou que je développe actuellement :</p>
                 </div>
                 <div className="project-cards flex flex-wrap justify-center max-w-screen-xl gap-3">
                     {projects.map((e, i) => {

@@ -12,10 +12,10 @@ function About() {
                     <span className="subtitle font-light">de moi</span>
                 </div>
                 <p className="py-2">
-                    Je m&apos;appelle Steeve MOMBRUN, développeur web spécialisé principalement en back-end, avec des compétences également en front-end. En parallèle, je possède une expertise en SEO, me permettant d&apos;optimiser les sites web pour améliorer leur visibilité en ligne.
+                    Je suis Steeve MOMBRUN, développeur web spécialisé en back-end avec des compétences en front-end. 
                 </p>
                 <p className="py-2">
-                    Pour moi, chaque projet représente une opportunité d&apos;apprendre et de me perfectionner, d&apos;affiner mes compétences et de créer des solutions robustes et évolutives. Passionné par le code, j&apos;aborde chaque mission avec l&apos;ambition de progresser continuellement et de contribuer de manière significative à la réussite des projets auxquels je participe.
+                    Chaque projet est pour moi une occasion d'apprendre, d'améliorer mes compétences avec le but de créer des solutions durables et performantes.
                 </p>
             </div>
         </section>
