@@ -21,7 +21,7 @@ function Works() {
                     <span className="subtitle font-light">Mes</span>
                     <h2 className="text-2xl font-bold">Réalisations</h2>
                 </div>
-                <div className="my-6">
+                <div className="my-6 max-w-md  m-auto text-justify">
                     <p className="text-center">Voici quelques projets sur lesquels j&apos;ai travaillé ou que je développe actuellement :</p>
                 </div>
                 <div className="project-cards flex flex-wrap justify-center max-w-screen-xl gap-3">

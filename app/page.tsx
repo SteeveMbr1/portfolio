@@ -4,6 +4,7 @@ import Works from "./components/pages/home/Works";
 import Skills from "./components/pages/home/Skills";
 import Contact from "./components/pages/home/Contact";
 import Footer from "./components/footer/Footer";
+import JsonLd from "./components/jsonLd/JsonLd";
 
 export default function HomePage() {
     return (
@@ -14,6 +15,7 @@ export default function HomePage() {
             <Skills></Skills>
             <Contact></Contact>
             <Footer></Footer>
+            <JsonLd></JsonLd>
         </>
     );
 }
