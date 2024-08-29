@@ -15,7 +15,7 @@ function About() {
                     Je suis Steeve MOMBRUN, développeur web spécialisé en back-end avec des compétences en front-end. 
                 </p>
                 <p className="py-2">
-                    Chaque projet est pour moi une occasion d'apprendre, d'améliorer mes compétences avec le but de créer des solutions durables et performantes.
+                    Chaque projet est pour moi une occasion d&apos;apprendre, d&apos;améliorer mes compétences avec le but de créer des solutions durables et performantes.
                 </p>
             </div>
         </section>
